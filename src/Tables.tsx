@@ -8,6 +8,7 @@ export const Tables: React.FC = () => {
         <thead>
           <th className="px-2 py-3 text-xs font-medium text-gray-500 uppercase dark:text-neutral-500 w-16">Kod</th>
           <th className="px-2 py-3 text-xs font-medium text-gray-500 uppercase dark:text-neutral-500">Nazov</th>
+          <th className="px-2 py-3 text-xs font-medium text-gray-500 uppercase dark:text-neutral-500 w-16">Link</th>
           <th className="px-2 py-3 text-xs font-medium text-gray-500 uppercase dark:text-neutral-500 w-24">Hmotnost</th>
           <th className="px-2 py-3 text-xs font-medium text-gray-500 uppercase dark:text-neutral-500 w-12">Cena</th>
           <th className="px-2 py-3 text-xs font-medium text-gray-500 uppercase dark:text-neutral-500 w-24">Pocet</th>

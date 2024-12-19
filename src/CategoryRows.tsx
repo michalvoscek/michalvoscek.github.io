@@ -25,6 +25,8 @@ export const CategoryRows: React.FC<Props> = (props) => {
         </td>
         {/* name */}
         <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200"></td>
+        {/* link */}
+        <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 font-bold"></td>
         {/* weight */}
         <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 text-center font-bold">
           {pickedWeightInGrams}/{category.weightLimitInGrams}
@@ -44,6 +46,10 @@ export const CategoryRows: React.FC<Props> = (props) => {
             {/* name */}
             <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 text-left">
               {item.name}
+            </td>
+            {/* link */}
+            <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
+              <a rel="noreferrer" href={`https://www.google.com/search?q=${item.name}`} target="_blank">link</a>
             </td>
             {/* weight */}
             <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
