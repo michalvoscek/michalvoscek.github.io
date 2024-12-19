@@ -5,6 +5,7 @@ export const categories: Category[] = [
   {
     name: 'L2',
     weightLimitInGrams: 10000,
+    rowClassName: 'bg-cyan-200',
     items: [
       {
         code: 'D1404',
@@ -215,6 +216,7 @@ export const categories: Category[] = [
   {
     name: 'L3',
     weightLimitInGrams: 2000,
+    rowClassName: 'bg-lime-200',
     items: [
       {
         code: 'DP025',

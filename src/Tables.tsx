@@ -15,7 +15,7 @@ export const Tables: React.FC = () => {
         </thead>
         <tbody>
           {categories.map((category) => {
-            return <CategoryRows category={category} key={category.name}/>
+            return <CategoryRows category={category} key={category.name} rowClassName={category.rowClassName}/>
           })}
         </tbody>
       </table>

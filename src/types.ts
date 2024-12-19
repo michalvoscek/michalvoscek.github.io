@@ -9,4 +9,5 @@ export type Category = {
   name: string
   weightLimitInGrams: number
   items: Product[]
+  rowClassName: string
 }
