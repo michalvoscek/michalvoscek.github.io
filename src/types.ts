@@ -11,3 +11,4 @@ export type Category = {
   items: Product[]
   rowClassName: string
 }
+
