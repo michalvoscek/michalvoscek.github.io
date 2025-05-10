@@ -1,6 +1,6 @@
+import _ from "lodash";
 import { Category, Product } from "./types";
 import { useUrlContext } from "./UrlContext";
-import _ from "lodash";
 
 interface Props {
   category: Category;
@@ -18,9 +18,14 @@ export const CategoryRows: React.FC<Props> = (props) => {
     _.sum,
   ])(category.items);
   const isLimitExceeded = pickedWeightInGrams > category.weightLimitInGrams;
+
   return (
     <>
       <tr>
+        {/* image */}
+        <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 font-bold">
+          {category.name}
+        </td>
         {/* code */}
         <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 font-bold">
           {category.name}
@@ -43,6 +48,19 @@ export const CategoryRows: React.FC<Props> = (props) => {
       {category.items.map((item) => {
         return (
           <tr className={rowClassName}>
+            {/* image */}
+            <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
+              <a
+                href={`/${item.image}`}
+                data-pswp-width={700}
+                data-pswp-height={700}
+                className="image"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={`/${item.image}`} alt="" />
+              </a>
+            </td>
             {/* code */}
             <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
               {item.code}
