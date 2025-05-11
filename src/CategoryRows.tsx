@@ -49,13 +49,13 @@ export const CategoryRows: React.FC<Props> = (props) => {
         return (
           <tr className={rowClassName}>
             {/* image */}
-            <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
+            <td className="px-2 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
               <a
                 href={`/${item.image}`}
                 className="image-link"
                 rel="noreferrer"
               >
-                <img src={`/${item.image}`} alt="" />
+                <img className="h-14 m-auto" src={`/${item.image}`} alt="" />
               </a>
             </td>
             {/* code */}
