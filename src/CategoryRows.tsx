@@ -52,10 +52,7 @@ export const CategoryRows: React.FC<Props> = (props) => {
             <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
               <a
                 href={`/${item.image}`}
-                data-pswp-width={700}
-                data-pswp-height={700}
-                className="image"
-                target="_blank"
+                className="image-link"
                 rel="noreferrer"
               >
                 <img src={`/${item.image}`} alt="" />
