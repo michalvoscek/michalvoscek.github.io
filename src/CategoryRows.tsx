@@ -23,9 +23,7 @@ export const CategoryRows: React.FC<Props> = (props) => {
     <>
       <tr>
         {/* image */}
-        <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 font-bold">
-          {category.name}
-        </td>
+        <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 font-bold"></td>
         {/* code */}
         <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 font-bold">
           {category.name}
