@@ -54,6 +54,7 @@ export const CategoryRows: React.FC<Props> = (props) => {
                 href={`/${item.image}`}
                 className="image-link"
                 rel="noreferrer"
+                data-sub-html={`<h4>${item.code}</h4><p>${item.name}</p>`}
               >
                 <img className="h-14 m-auto" src={`/${item.image}`} alt="" />
               </a>
