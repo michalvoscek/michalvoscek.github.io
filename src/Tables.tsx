@@ -1,24 +1,7 @@
-import { useEffect } from "react";
-import PhotoSwipeLightbox from "photoswipe/lightbox";
 import { categories } from "./constants";
 import { CategoryRows } from "./CategoryRows";
 
 export const Tables: React.FC = () => {
-  useEffect(() => {
-    let lightbox = new PhotoSwipeLightbox({
-      gallery: "#main-table",
-      children: "a.image",
-      pswpModule: () => import("photoswipe"),
-    });
-    lightbox.init();
-
-    return () => {
-      lightbox.destroy();
-      // @ts-ignore
-      lightbox = null;
-    };
-  }, []);
-
   return (
     <div className="flex flex-col items-center">
       <table

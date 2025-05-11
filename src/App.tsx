@@ -3,7 +3,6 @@ import "./App.css";
 import { Tables } from "./Tables";
 import { UrlContext } from "./UrlContext";
 import { Receipt } from "./Receipt";
-import "photoswipe/style.css";
 
 function App() {
   return (
