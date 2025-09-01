@@ -25,21 +25,21 @@ export const CategoryRows: React.FC<Props> = (props) => {
         {/* image */}
         <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 font-bold"></td>
         {/* code */}
-        <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 font-bold">
+        <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 font-bold hidden md:table-cell">
           {category.name}
         </td>
         {/* name */}
         <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200"></td>
         {/* link */}
-        <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 font-bold"></td>
+        <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 font-bold hidden md:table-cell"></td>
         {/* weight */}
         <td
-          className={`px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 text-center font-bold ${isLimitExceeded ? "text-red-500" : ""}`}
+          className={`px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 text-center font-bold  ${isLimitExceeded ? "text-red-500" : ""}`}
         >
           {pickedWeightInGrams}/{category.weightLimitInGrams}
         </td>
         {/* price */}
-        <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200"></td>
+        <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 hidden md:table-cell"></td>
         {/* amount */}
         <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200"></td>
       </tr>
@@ -58,15 +58,15 @@ export const CategoryRows: React.FC<Props> = (props) => {
               </a>
             </td>
             {/* code */}
-            <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
+            <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 hidden md:table-cell">
               {item.code}
             </td>
             {/* name */}
-            <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 text-left">
+            <td className="px-2 overflow-hidden whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 text-left">
               {item.name}
             </td>
             {/* link */}
-            <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
+            <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 hidden md:table-cell">
               <a
                 rel="noreferrer"
                 tabIndex={-1}
@@ -81,7 +81,7 @@ export const CategoryRows: React.FC<Props> = (props) => {
               {item.weightInGrams}
             </td>
             {/* price */}
-            <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
+            <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 hidden md:table-cell">
               {item.maxPrice}
             </td>
             {/* amount */}

@@ -11,28 +11,28 @@ export const Tables: React.FC = () => {
       <LightGallery onInit={onInit} speed={500} selector=".image-link">
         <table
           id="main-table"
-          className="table-fixed w-[1000px] divide-y divide-gray-200 dark:divide-neutral-700"
+          className="table-fixed max-w-[1000px] w-full divide-y divide-gray-200 dark:divide-neutral-700"
         >
           <thead>
             <th className="px-2 py-3 text-xs font-medium text-gray-500 uppercase dark:text-neutral-500 w-16">
               Obrazok
             </th>
-            <th className="px-2 py-3 text-xs font-medium text-gray-500 uppercase dark:text-neutral-500 w-16">
+            <th className="px-2 py-3 text-xs font-medium text-gray-500 uppercase dark:text-neutral-500 w-16 hidden md:table-cell">
               Kod
             </th>
             <th className="px-2 py-3 text-xs font-medium text-gray-500 uppercase dark:text-neutral-500">
               Nazov
             </th>
-            <th className="px-2 py-3 text-xs font-medium text-gray-500 uppercase dark:text-neutral-500 w-16">
+            <th className="px-2 py-3 text-xs font-medium text-gray-500 uppercase dark:text-neutral-500 w-16 hidden md:table-cell">
               Link
             </th>
-            <th className="px-2 py-3 text-xs font-medium text-gray-500 uppercase dark:text-neutral-500 w-24">
+            <th className="px-2 py-3 text-xs font-medium text-gray-500 uppercase dark:text-neutral-500 w-24 ">
               Hmotnost
             </th>
-            <th className="px-2 py-3 text-xs font-medium text-gray-500 uppercase dark:text-neutral-500 w-12">
+            <th className="px-2 py-3 text-xs font-medium text-gray-500 uppercase dark:text-neutral-500 w-12 hidden md:table-cell">
               Cena
             </th>
-            <th className="px-2 py-3 text-xs font-medium text-gray-500 uppercase dark:text-neutral-500 w-24">
+            <th className="px-2 py-3 text-xs font-medium text-gray-500 uppercase dark:text-neutral-500 w-16 md:w-24">
               Pocet
             </th>
           </thead>
