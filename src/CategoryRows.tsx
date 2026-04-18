@@ -10,14 +10,6 @@ interface Props {
 export const CategoryRows: React.FC<Props> = (props) => {
   const { category, rowClassName } = props;
   const { setProp, state } = useUrlContext();
-  const pickedWeightInGrams = _.flow([
-    _.partialRight(_.map, (item: Product) => {
-      const pickedCount = _.get(state, item.code, 0);
-      return item.weightInGrams * pickedCount;
-    }),
-    _.sum,
-  ])(category.items);
-  const isLimitExceeded = pickedWeightInGrams > category.weightLimitInGrams;
 
   return (
     <>
@@ -34,10 +26,10 @@ export const CategoryRows: React.FC<Props> = (props) => {
         <td className="px-2 w-16 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 font-bold hidden md:table-cell"></td>
         {/* weight */}
         <td
-          className={`px-2 w-24 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 text-center font-bold hidden md:table-cell ${isLimitExceeded ? "text-red-500" : ""}`}
-        >
-          {pickedWeightInGrams}/{category.weightLimitInGrams}
-        </td>
+          className={
+            "px-2 w-24 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 text-center font-bold hidden md:table-cell"
+          }
+        ></td>
         {/* price */}
         <td className="px-2 w-12 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 hidden md:table-cell"></td>
         {/* amount */}
