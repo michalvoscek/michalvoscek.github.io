@@ -2,9 +2,9 @@ import { categories } from "./constants";
 import { Category, Product } from "./types";
 import { CategoryRows } from "./CategoryRows";
 import { useUrlContext } from "./UrlContext";
-import LightGallery from "lightgallery/react";
 import _ from "lodash";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import PhotoSwipeLightbox from "photoswipe/lightbox";
 
 const normalizeString = (str: string): string => {
   return str
@@ -53,9 +53,18 @@ export const Tables: React.FC = () => {
     }),
   ])(categories);
 
-  const onInit = () => {
-    console.log("gallery init");
-  };
+  useEffect(() => {
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: "#gallery-container",
+      children: "a.image-link",
+      pswpModule: () => import("photoswipe"),
+    });
+    lightbox.init();
+    return () => {
+      lightbox.destroy();
+    };
+  }, []);
+
   return (
     <div className="flex flex-col items-center">
       <div className="sticky top-0 z-10 bg-gray-100 dark:bg-neutral-900 w-full max-w-[1000px] px-4 py-2 flex flex-col gap-2 border-b border-gray-200 dark:border-neutral-700">
@@ -88,7 +97,7 @@ export const Tables: React.FC = () => {
           )}
         </div>
       </div>
-      <LightGallery onInit={onInit} speed={500} selector=".image-link">
+      <div id="gallery-container">
         <table
           id="main-table"
           className="table-fixed max-w-[1000px] w-full divide-y divide-gray-200 dark:divide-neutral-700"
@@ -105,7 +114,7 @@ export const Tables: React.FC = () => {
             })}
           </tbody>
         </table>
-      </LightGallery>
+      </div>
     </div>
   );
 };

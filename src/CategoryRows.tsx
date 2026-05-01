@@ -44,9 +44,25 @@ export const CategoryRows: React.FC<Props> = (props) => {
                 href={`/${item.image}`}
                 className="image-link"
                 rel="noreferrer"
-                data-sub-html={`<h4>${item.code}</h4><p>${item.name}</p>`}
+                data-pswp-caption={`${item.code} - ${item.name}`}
               >
-                <img className="h-14 m-auto" src={`/${item.image}`} alt="" />
+                <img
+                  className="h-14 m-auto"
+                  src={`/${item.image}`}
+                  alt=""
+                  onLoad={(e) => {
+                    const img = e.currentTarget;
+                    const anchor = img.parentElement as HTMLAnchorElement;
+                    if (anchor) {
+                      const targetHeight = 800;
+                      const aspectRatio = img.naturalWidth / img.naturalHeight;
+                      anchor.dataset.pswpHeight = String(targetHeight);
+                      anchor.dataset.pswpWidth = String(
+                        Math.round(targetHeight * aspectRatio),
+                      );
+                    }
+                  }}
+                />
               </a>
             </td>
             {/* code */}
