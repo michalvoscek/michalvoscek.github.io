@@ -12,33 +12,11 @@ export const CategoryRows: React.FC<Props> = (props) => {
 
   return (
     <>
-      <tr>
-        {/* image */}
-        <td className="px-2 w-20 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 font-bold"></td>
-        {/* code */}
-        <td className="px-2 w-16 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 font-bold hidden md:table-cell">
-          {category.name}
-        </td>
-        {/* name */}
-        <td className="px-2 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200"></td>
-        {/* link */}
-        <td className="px-2 w-16 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 font-bold hidden md:table-cell"></td>
-        {/* weight */}
-        <td
-          className={
-            "px-2 w-24 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 text-center font-bold hidden md:table-cell"
-          }
-        ></td>
-        {/* price */}
-        <td className="px-2 w-12 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 hidden md:table-cell"></td>
-        {/* amount */}
-        <td className="px-2 w-24 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200"></td>
-      </tr>
       {category.items.map((item) => {
         return (
           <tr className={rowClassName}>
             {/* image */}
-            <td className="pl-6 pr-2 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
+            <td className="pl-6 pr-2 w-20 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
               <a
                 href={`/${item.image}`}
                 className="image-link"
@@ -65,7 +43,7 @@ export const CategoryRows: React.FC<Props> = (props) => {
               </a>
             </td>
             {/* code */}
-            <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 hidden md:table-cell">
+            <td className="px-2 w-16 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 hidden md:table-cell">
               {item.code}
             </td>
             {/* name */}
@@ -73,7 +51,7 @@ export const CategoryRows: React.FC<Props> = (props) => {
               {item.name}
             </td>
             {/* link */}
-            <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 hidden md:table-cell">
+            <td className="px-2 w-16 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 hidden md:table-cell">
               <a
                 rel="noreferrer"
                 tabIndex={-1}
@@ -84,15 +62,15 @@ export const CategoryRows: React.FC<Props> = (props) => {
               </a>
             </td>
             {/* weight */}
-            <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 hidden md:table-cell">
+            <td className="px-2 w-24 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 hidden md:table-cell">
               {item.weightInGrams}
             </td>
             {/* price */}
-            <td className="px-2  whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 hidden md:table-cell">
+            <td className="px-2 w-12 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200 hidden md:table-cell">
               {item.maxPrice}
             </td>
             {/* amount */}
-            <td className="pr-6 pl-2 w-20 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
+            <td className="pr-6 pl-2 w-24 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
               <input
                 type="number"
                 value={state[item.code] || ""}
