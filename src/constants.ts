@@ -1,4 +1,3 @@
-import _ from "lodash";
 import type { Category } from "./types";
 
 export const categories: Category[] = [

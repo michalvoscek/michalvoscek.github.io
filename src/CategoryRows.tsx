@@ -1,5 +1,4 @@
-import _ from "lodash";
-import { Category, Product } from "./types";
+import { Category } from "./types";
 import { useUrlContext } from "./UrlContext";
 
 interface Props {

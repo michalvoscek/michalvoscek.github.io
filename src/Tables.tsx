@@ -1,5 +1,5 @@
 import { categories } from "./constants";
-import { Category, Product } from "./types";
+import { Category } from "./types";
 import { CategoryRows } from "./CategoryRows";
 import { useUrlContext } from "./UrlContext";
 import _ from "lodash";
