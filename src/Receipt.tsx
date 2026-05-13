@@ -52,7 +52,7 @@ export const Receipt: React.FC = () => {
             : "bg-gray-200 dark:bg-neutral-700 text-gray-800 dark:text-neutral-200 hover:bg-gray-300 dark:hover:bg-neutral-600"
         }`}
       >
-        {copied ? "Copied!" : "Copy to Clipboard"}
+        {copied ? "Skopírované!" : "Kopírovať do schránky"}
       </button>
     </div>
   );
