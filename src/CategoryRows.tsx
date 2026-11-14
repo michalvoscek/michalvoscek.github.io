@@ -14,7 +14,7 @@ export const CategoryRows: React.FC<Props> = (props) => {
     <>
       {category.items.map((item) => {
         return (
-          <tr className={rowClassName}>
+          <tr key={item.code} className={rowClassName}>
             {/* image */}
             <td className="pl-6 pr-2 w-20 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
               <a
