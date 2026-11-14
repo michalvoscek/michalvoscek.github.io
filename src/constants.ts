@@ -15,14 +15,14 @@ export const categories: Category[] = [
       },
       {
         code: "D1492",
-        image: "product-placeholder.svg",
+        image: "D1492.jpg",
         name: "Hrachová múka",
         weightInGrams: 500,
         maxPrice: 0.07,
       },
       {
         code: "D1518",
-        image: "product-placeholder.svg",
+        image: "D1518.jpg",
         name: "Hrachová krupica",
         weightInGrams: 500,
         maxPrice: 0.29,
@@ -267,7 +267,7 @@ export const categories: Category[] = [
       },
       {
         code: "D1559",
-        image: "product-placeholder.svg",
+        image: "D1559.jpg",
         name: "Pohánkový perník, bezgluténová prášková zmes",
         weightInGrams: 500,
         maxPrice: 2.68,
