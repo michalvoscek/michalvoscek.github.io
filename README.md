@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Deployment
+
+Set **Source** to **GitHub Actions** in the repository's [Pages settings](https://github.com/michalvoscek/michalvoscek.github.io/settings/pages) once.
+
+After that, each push to `master` triggers the [deployment workflow](.github/workflows/deploy.yml), which builds the app and publishes it to [michalvoscek.github.io](https://michalvoscek.github.io/). You can follow the run in the repository's **Actions** tab. There is no need to run `yarn deploy` manually.
+
 ## Available Scripts
 
 In the project directory, you can run:
